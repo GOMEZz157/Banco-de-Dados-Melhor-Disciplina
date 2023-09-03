@@ -180,3 +180,7 @@ LEFT JOIN livros ON autores.id = livros.autor_id
 GROUP BY autores.nome
 ORDER BY total_livros_publicados DESC
 LIMIT 1;
+
+--exercicio 17
+SELECT produto, MIN(receita) AS menor_receita
+FROM vendas;
