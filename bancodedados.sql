@@ -167,3 +167,8 @@ LEFT JOIN livros ON autores.id = livros.autor_id;
 SELECT matriculas.curso, alunos.nome AS aluno
 FROM matriculas
 RIGHT JOIN alunos ON matriculas.aluno_id = alunos.id;
+
+--exercicio 15
+SELECT alunos.nome AS aluno, matriculas.curso
+FROM matriculas
+INNER JOIN alunos ON matriculas.aluno_id = alunos.id;
