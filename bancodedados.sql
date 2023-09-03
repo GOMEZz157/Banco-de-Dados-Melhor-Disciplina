@@ -191,3 +191,9 @@ FROM autores
 LEFT JOIN livros ON autores.id = livros.autor_id
 LEFT JOIN vendas ON livros.titulo = vendas.produto
 GROUP BY autores.nome;
+
+--exercicio 19
+SELECT alunos.nome AS aluno, COUNT(matriculas.id) AS total_matriculas
+FROM alunos
+LEFT JOIN matriculas ON alunos.id = matriculas.aluno_id
+GROUP BY alunos.nome;
