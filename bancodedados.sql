@@ -184,3 +184,10 @@ LIMIT 1;
 --exercicio 17
 SELECT produto, MIN(receita) AS menor_receita
 FROM vendas;
+
+--exercicio 18
+SELECT autores.nome AS autor, SUM(20) AS receita_total
+FROM autores
+LEFT JOIN livros ON autores.id = livros.autor_id
+LEFT JOIN vendas ON livros.titulo = vendas.produto
+GROUP BY autores.nome;
