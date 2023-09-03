@@ -162,3 +162,8 @@ LEFT JOIN matriculas ON alunos.id = matriculas.aluno_id;
 SELECT autores.nome AS autor, IFNULL(livros.titulo, 'Nenhum livro publicado') AS livro
 FROM autores
 LEFT JOIN livros ON autores.id = livros.autor_id;
+
+--exercicio 14
+SELECT matriculas.curso, alunos.nome AS aluno
+FROM matriculas
+RIGHT JOIN alunos ON matriculas.aluno_id = alunos.id;
